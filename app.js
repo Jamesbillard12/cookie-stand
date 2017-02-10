@@ -30,5 +30,3 @@ var pikesPlace = {
     ul.appendChild(li2);
   },
 }
-
-// this.timeOfDay[i] + Math.floor
