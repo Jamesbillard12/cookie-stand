@@ -3,17 +3,23 @@ var pikesPlace = {
   max: 88,
   avg: 5.2,
   timeOfDay: ['Ten:', 'Eleven:', 'Twelve:', 'One:', 'Two:', 'Three:', 'Four:', 'Five:'],
+  cookiesPurchasedArray: [],
 
-  randCustPerHour: function(min, max) {
-    return Math.random() * (max - min + 1) + min;
+  randCustPerHour: function() {
+    return Math.random() * (this.max - this.min + 1) + this.min;
   },
 
+  cookiesPurchased: function() {
+    for ( var i = 0; i < this.timeOfDay.length; i++) {
+      this.cookiesPurchasedArray.push(this.avg * this.randCustPerHour());
+    }
+  },
   numberCookiesPerHour: function() {
-    for (i = 0; i < 7; i++) {
-      document.write(pikesPlace.timeOfDay[i] + Math.floor(this.randCustPerHour(pikePlace.min, pikePlace.max)*(pikePlace.avg)))
+    for (var i = 0; i < 7; i++) {
+      var li = document.createElement("li");
+      li.appendChild(document.createTextNode(this.timeOfDay[i] + Math.floor(this.randCustPerHour(this.min, this.max)*(this.avg))));
+      ul.appendChild(li)
     }
 
   },
-  liEl: document.getElementById("timeOfDay"),
-  timeOfDay.textContent = pikePlace.render(),
 }
