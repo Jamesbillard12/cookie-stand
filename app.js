@@ -178,3 +178,9 @@ var alki = {
     ul.appendChild(li2);
   },
 };
+
+pikePlace.renderCookiesPerHour();
+seaTacAir.renderCookiesPerHour();
+southCenter.renderCookiesPerHour();
+bellevueSquare.renderCookiesPerHour();
+alki.renderCookiesPerHour();
