@@ -5,6 +5,11 @@
   color: #191f1d;
 }
 
+#head1 {
+  font-family: Helvetica, sans-serif;
+  color: #25705A;
+}
+
 #primary {
   background-color: #AA3939;
   height: 100px;
